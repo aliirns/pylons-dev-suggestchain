@@ -5,12 +5,12 @@ function myFunction(config) {
     window.keplr
       .experimentalSuggestChain(config)
       .then(() => {
-        console.log("chain added");
+        alert(`${config.chainName} was added`);
         return 1;
       })
       .catch((err) => {
         console.log(err);
-        alert("Chain was not added");
+        alert("Refresh the page if both chains are not available");
         return 0;
       });
   }
@@ -98,8 +98,6 @@ function addChains() {
     explorerUrlToTx: "https://www.mintscan.io/juno/txs/{txHash}",
   };
 
-  myFunction(pylonsConfig).then((val) => {
-    console.log(val);
-    myFunction(AxelarTestNetConfig);
-  });
+  myFunction(pylonsConfig);
+  myFunction(AxelarTestNetConfig);
 }
