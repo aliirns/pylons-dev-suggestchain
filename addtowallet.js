@@ -96,6 +96,7 @@ function addChains() {
     explorerUrlToTx: "https://www.mintscan.io/juno/txs/{txHash}",
   };
 
-  myFunction(pylonsConfig);
-  myFunction(AxelarTestNetConfig);
+  myFunction(pylonsConfig).then(() => {
+    myFunction(AxelarTestNetConfig);
+  });
 }
