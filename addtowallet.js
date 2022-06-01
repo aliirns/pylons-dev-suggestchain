@@ -93,6 +93,7 @@ function addChains() {
       },
     ],
     features: ["ibc-transfer", "ibc-go"],
+    explorerUrlToTx: "https://www.mintscan.io/juno/txs/{txHash}",
   };
 
   myFunction(pylonsConfig);
