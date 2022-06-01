@@ -6,10 +6,12 @@ function myFunction(config) {
       .experimentalSuggestChain(config)
       .then(() => {
         console.log("chain added");
+        return 1;
       })
       .catch((err) => {
         console.log(err);
         alert("Chain was not added");
+        return 0;
       });
   }
 }
@@ -96,7 +98,8 @@ function addChains() {
     explorerUrlToTx: "https://www.mintscan.io/juno/txs/{txHash}",
   };
 
-  myFunction(pylonsConfig).then(() => {
+  myFunction(pylonsConfig).then((val) => {
+    console.log(val);
     myFunction(AxelarTestNetConfig);
   });
 }
