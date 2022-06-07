@@ -89,8 +89,8 @@ function addChains() {
     ],
     feeCurrencies: [
       {
-        coinDenom: "uaxl",
-        coinMinimalDenom: "uaxl",
+        coinDenom: "uuaxl",
+        coinMinimalDenom: "uuaxl",
         coinDecimals: 6,
       },
     ],
@@ -99,5 +99,4 @@ function addChains() {
   };
 
   myFunction(pylonsConfig);
-  myFunction(AxelarTestNetConfig);
 }
