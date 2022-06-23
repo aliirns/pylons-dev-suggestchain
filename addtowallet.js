@@ -62,8 +62,8 @@ function addChains() {
   };
 
   const AxelarTestNetConfig = {
-    rpc: "http://176.57.188.203:26657",
-    rest: "http://176.57.188.203:1317",
+    rpc: "https://axelartest-lcd.quickapi.com",
+    rest: "https://axelartest-lcd.quickapi.com",
     chainId: "axelar-testnet-lisbon-3",
     chainName: "Test-Axelar",
     stakeCurrency: {
@@ -82,15 +82,15 @@ function addChains() {
     },
     currencies: [
       {
-        coinDenom: "uaxl",
-        coinMinimalDenom: "uaxl",
+        coinDenom: "AXL",
+        coinMinimalDenom: "AXL",
         coinDecimals: 5,
       },
     ],
     feeCurrencies: [
       {
-        coinDenom: "uuaxl",
-        coinMinimalDenom: "uuaxl",
+        coinDenom: "AXL",
+        coinMinimalDenom: "AXL",
         coinDecimals: 6,
       },
     ],
@@ -99,4 +99,5 @@ function addChains() {
   };
 
   myFunction(pylonsConfig);
+  myFunction(AxelarTestNetConfig);
 }
