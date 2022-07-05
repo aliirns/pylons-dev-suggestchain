@@ -62,12 +62,12 @@ function addChains() {
   };
 
   const AxelarTestNetConfig = {
-    rpc: "https://axelartest-lcd.quickapi.com",
-    rest: "https://axelartest-lcd.quickapi.com",
+    rpc: "https://axelar-lisbon-rpc.allthatnode.com:26657",
+    rest: "https://axelar-lisbon-rpc.allthatnode.com:1317",
     chainId: "axelar-testnet-lisbon-3",
-    chainName: "Test-Axelar",
+    chainName: "Axelar-Lisbon",
     stakeCurrency: {
-      coinDenom: "uaxl",
+      coinDenom: "AXL",
       coinMinimalDenom: "uaxl",
       coinDecimals: 5,
     },
@@ -83,19 +83,15 @@ function addChains() {
     currencies: [
       {
         coinDenom: "AXL",
-        coinMinimalDenom: "AXL",
-        coinDecimals: 5,
-      },
-    ],
-    feeCurrencies: [
-      {
-        coinDenom: "AXL",
-        coinMinimalDenom: "AXL",
+        coinMinimalDenom: "uaxl",
         coinDecimals: 6,
       },
     ],
-    features: ["ibc-transfer", "ibc-go"],
-    explorerUrlToTx: "https://www.mintscan.io/juno/txs/{txHash}",
+    feeCurrencies: [
+      { coinDenom: "AXL", coinMinimalDenom: "uaxl", coinDecimals: 6 },
+    ],
+    gasPriceStep: { low: 0.05, average: 0.125, high: 0.2 },
+    features: ["stargate", "no-legacy-stdTx", "ibc-transfer"],
   };
 
   myFunction(pylonsConfig);
