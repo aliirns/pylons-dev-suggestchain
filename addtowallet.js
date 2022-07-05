@@ -10,18 +10,18 @@ function myFunction(config) {
       })
       .catch((err) => {
         console.log(err);
-        alert("Refresh the page if both chains are not available");
+        alert("Refresh the page if chains are not available");
         return 0;
       });
   }
 }
 
 function addChains() {
-  const pylonsConfig = {
-    rpc: "http://46.166.140.172:26657",
-    rest: "http://46.166.140.172:1317",
-    chainId: "pylons-testnet-3",
-    chainName: "pylons-testnet-3",
+  const pylonsDevNetConfig = {
+    rpc: "http://35.188.86.73:36657/",
+    rest: "http://35.188.86.73:2317/",
+    chainId: "pylons",
+    chainName: "PYLONS",
     stakeCurrency: {
       coinDenom: "Bedrock",
       coinMinimalDenom: "ubedrock",
@@ -61,39 +61,5 @@ function addChains() {
     explorerUrlToTx: "https://www.mintscan.io/juno/txs/{txHash}",
   };
 
-  const AxelarTestNetConfig = {
-    rpc: "https://axelar-lisbon-rpc.allthatnode.com:26657",
-    rest: "https://axelar-lisbon-rpc.allthatnode.com:1317",
-    chainId: "axelar-testnet-lisbon-3",
-    chainName: "Axelar-Lisbon",
-    stakeCurrency: {
-      coinDenom: "AXL",
-      coinMinimalDenom: "uaxl",
-      coinDecimals: 5,
-    },
-    bip44: { coinType: 118 },
-    bech32Config: {
-      bech32PrefixAccAddr: "axelar",
-      bech32PrefixAccPub: "axelar" + "pub",
-      bech32PrefixValAddr: "axelar" + "valoper",
-      bech32PrefixValPub: "axelar" + "valoperpub",
-      bech32PrefixConsAddr: "axelar" + "valcons",
-      bech32PrefixConsPub: "axelar" + "valconspub",
-    },
-    currencies: [
-      {
-        coinDenom: "AXL",
-        coinMinimalDenom: "uaxl",
-        coinDecimals: 6,
-      },
-    ],
-    feeCurrencies: [
-      { coinDenom: "AXL", coinMinimalDenom: "uaxl", coinDecimals: 6 },
-    ],
-    gasPriceStep: { low: 0.05, average: 0.125, high: 0.2 },
-    features: ["stargate", "no-legacy-stdTx", "ibc-transfer"],
-  };
-
-  myFunction(pylonsConfig);
-  myFunction(AxelarTestNetConfig);
+  myFunction(pylonsDevNetConfig);
 }
