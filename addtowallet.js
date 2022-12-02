@@ -20,8 +20,8 @@ function addChains() {
   const pylonsDevNetConfig = {
     rpc: "http://35.188.86.73:36657",
     rest: "http://35.188.86.73:2317",
-    chainId: "pylons",
-    chainName: "PYLONS",
+    chainId: "pylons-testnet-1",
+    chainName: "Pylons",
     stakeCurrency: {
       coinDenom: "Bedrock",
       coinMinimalDenom: "ubedrock",
